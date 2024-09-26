@@ -6,6 +6,7 @@
   background-color: #f9f9f9;
   height: 100vh;
   justify-content: center;
+  overflow: hidden; /* Prevent any layout issues */
 }
 
 .chatbox {
@@ -17,6 +18,8 @@
   text-align: center;
   width: 300px;
   position: relative;
+  max-width: 100%; /* Ensure responsiveness */
+  overflow-y: auto; /* Handle message overflow */
 }
 
 .chatbox .chat-messages p {
@@ -90,4 +93,3 @@
   border-radius: 5px;
   cursor: pointer;
 }
-

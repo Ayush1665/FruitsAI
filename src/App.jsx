@@ -9,6 +9,7 @@ import ProtectedRoute from './components/Others/ProtectedRoute';
 import FaqPage from './components/Pages/FaqPage';
 import ChatPage from './components/Pages/ChatPage';
 
+
 const App = () => (
   <Router>
     <Routes>
