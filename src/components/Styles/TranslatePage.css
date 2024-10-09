@@ -18,7 +18,6 @@ h1 {
 
 .input-group {
   margin-bottom: 15px;
-  
 }
 
 .input-group label {
@@ -55,7 +54,7 @@ select {
   width: 100%;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: rgba(0, 0, 0,0.7);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-size: 1rem;
@@ -73,4 +72,7 @@ select {
   color: red;
   margin-top: 10px;
   font-size: 0.9rem;
+}
+.clear-button{
+  margin-left: 160px;
 }

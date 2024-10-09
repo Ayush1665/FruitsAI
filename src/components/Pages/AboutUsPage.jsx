@@ -1,6 +1,3 @@
-
-
-// src/AboutUs.jsx
 import React from 'react';
 import '../Styles/AboutUsPage.css'; // Import your custom CSS
 

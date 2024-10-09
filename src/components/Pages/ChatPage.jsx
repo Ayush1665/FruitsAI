@@ -18,7 +18,7 @@ const ChatPage = () => {
     <div className="chatbot-page">
       <div className="chatbox">
         <ChatBot
-          headerTitle="FruitAI"
+          headerTitle="Fruit.AI"
           recognitionEnable={true}
           steps={[
             {
@@ -62,7 +62,7 @@ const ChatPage = () => {
             },
             {
               id: '7',
-              message: 'Sorry, I don’t have information on that fruit. Please try again.',
+              message: 'Sorry, I don’t have information on that fruit.',
               trigger: '4',
             },
             {

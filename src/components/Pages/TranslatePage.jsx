@@ -67,6 +67,35 @@ const languages = [
   { no: "56", name: "Vietnamese", native: "Tiếng Việt", code: "vi" },
   { no: "57", name: "Welsh", native: "Cymraeg", code: "cy" },
   { no: "58", name: "Yiddish", native: "ייִדיש", code: "yi" },
+  { no: "59", name: "Amharic", native: "አማርኛ", code: "am" },
+  { no: "60", name: "Bengali", native: "বাংলা", code: "bn" },
+  { no: "61", name: "Bosnian", native: "Bosanski", code: "bs" },
+  { no: "62", name: "Dzongkha", native: "རྫོང་ཁ", code: "dz" },
+  { no: "63", name: "Esperanto", native: "Esperanto", code: "eo" },
+  { no: "64", name: "Faroese", native: "Føroyskt", code: "fo" },
+  { no: "65", name: "Gujarati", native: "ગુજરાતી", code: "gu" },
+  { no: "66", name: "Hausa", native: "Hausa", code: "ha" },
+  { no: "67", name: "Inuktitut", native: "ᐃᓄᒃᑎᑐᑦ", code: "iu" },
+  { no: "68", name: "Kannada", native: "ಕನ್ನಡ", code: "kn" },
+  { no: "69", name: "Kazakh", native: "Қазақ", code: "kk" },
+  { no: "70", name: "Khmer", native: "ភាសាខ្មែរ", code: "km" },
+  { no: "71", name: "Kurdish", native: "Kurdî", code: "ku" },
+  { no: "72", name: "Lao", native: "ລາວ", code: "lo" },
+  { no: "73", name: "Luxembourgish", native: "Lëtzebuergesch", code: "lb" },
+  { no: "74", name: "Malayalam", native: "മലയാളം", code: "ml" },
+  { no: "75", name: "Mongolian", native: "Монгол хэл", code: "mn" },
+  { no: "76", name: "Nepali", native: "नेपाली", code: "ne" },
+  { no: "77", name: "Pashto", native: "پښتو", code: "ps" },
+  { no: "78", name: "Punjabi", native: "ਪੰਜਾਬੀ", code: "pa" },
+  { no: "79", name: "Sinhala", native: "සිංහල", code: "si" },
+  { no: "80", name: "Somali", native: "Soomaali", code: "so" },
+  { no: "81", name: "Tajik", native: "Тоҷикӣ", code: "tg" },
+  { no: "82", name: "Tamil", native: "தமிழ்", code: "ta" },
+  { no: "83", name: "Telugu", native: "తెలుగు", code: "te" },
+  { no: "84", name: "Tibetan", native: "བོད་སྐད", code: "bo" },
+  { no: "85", name: "Uzbek", native: "Oʻzbek", code: "uz" },
+  { no: "86", name: "Zulu", native: "isiZulu", code: "zu" }
+
 ];
 
 const TranslatePage = () => {
@@ -98,11 +127,17 @@ const TranslatePage = () => {
       const data = await response.json();
       setTranslatedText(data[0].map((item) => item[0]).join(""));
     } catch (error) {
-      setError(`Error: ${error.message}`);
+      setError(`Please enter the text for translation`);
     } finally {
       setLoading(false);
     }
   };
+  const handleClear = () => {
+    setText(""); 
+    setTranslatedText(""); 
+    setError(""); 
+  };
+
 
   return (
     <div className="translate-container">
@@ -145,7 +180,9 @@ const TranslatePage = () => {
       <button className="translate-button" onClick={handleTranslate} disabled={loading}>
         {loading ? "Translating..." : "Translate"}
       </button>
-
+      <button className="clear-button" onClick={handleClear}>
+          Clear
+      </button>
       {error && <p className="error">{error}</p>}
       {translatedText && (
         <div className="result">

@@ -6,14 +6,16 @@
     font-size: 24px;
     font-weight: bold;
   }
+  
   .login-container {
-    max-width: 400px;
+    max-width: 325px;
     margin: auto;
-    padding: 65px;
+    padding: 45px;
+    
     text-align: center;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.7);
     border-radius: 40px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
   }
   input {
     display: block;
@@ -23,6 +25,7 @@
     font-family: 'Arial', sans-serif;
     margin: 10px auto;
     margin-left:-8px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
   button {
     padding: 10px;
